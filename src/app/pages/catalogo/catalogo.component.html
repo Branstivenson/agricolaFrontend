@@ -1,0 +1,22 @@
+<nav class="mt-5 mb-5">
+  <div class="container-fluid">
+    <form (ngSubmit)="buscarProducto()" class="d-flex" role="search">
+      <input [(ngModel)]="buscar" name="buscar" class="form-control me-2" type="search"
+        placeholder="Buscar servicios por nombre">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<div class="productos-container">
+<div class="card mt-5" style="width: 16rem" *ngFor="let producto of productos">
+    <img src="{{producto.urlImage}}" class="card-img-top" alt="">
+    <div class="card-body">
+      <h1 class="card-title">{{producto.nombre}}</h1>
+      <p class="card-text">{{producto.precio}}</p>
+      <a href="#" class="btn btn-success bi bi-basket"><img src="/../../../../../../../assets/basket.svg"></a>
+      
+    </div>
+  </div>
+</div>
+  
